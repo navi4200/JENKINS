@@ -5,7 +5,7 @@ RUN yum install httpd zip unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page290/restoran.zip /var/wwww/html
 WORKDIR /var/www/html
 RUN cd /var/www/html
-RUN unzip restoran.zip /var/www/html
+RUN unzip restoran.zip 
 RUN rm -rf restoran.zip &&\
     cp -rf restoran.zip . &&\ 
     rm -rf restoran.zip 

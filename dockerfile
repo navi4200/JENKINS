@@ -7,6 +7,6 @@ WORKDIR /var/www/html
 RUN unzip maria-ferrero.zip
 RUN rm -rf maria-ferrero.zip &&\
     cp -rf maria-ferrero/* .&&\
-    rm -rf maria-ferrero &&\
+    rm -rf maria-ferrero 
 EXPOSE 80
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]

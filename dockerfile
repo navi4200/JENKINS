@@ -4,7 +4,6 @@ RUN  sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org
 RUN yum install httpd zip unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page269/bonativo.zip /var/wwww/html
 WORKDIR /var/www/html
-RUN cd /var/www/html
 RUN unzip bonativo.zip 
 RUN rm -rf bonativo.zip &&\
     cp -rf bonativo/* . &&\ 

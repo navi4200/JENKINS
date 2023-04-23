@@ -9,6 +9,5 @@ RUN rm -rf cryptop.zip
 RUN cp -rf cryptop-html/* .
 RUN rm -rf cryptop-html
 RUN systemctl restart httpd
-RUN systemctl enable --now httpd
 EXPOSE 80
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
